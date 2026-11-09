@@ -1,7 +1,7 @@
 #include <iostream>
 #include <memory>
-#include "expression.hpp"
-#include "fraction.hpp"
+#include "ratexpr/expression.hpp"
+#include "ratexpr/fraction.hpp"
 
 using namespace ratexpr;
 

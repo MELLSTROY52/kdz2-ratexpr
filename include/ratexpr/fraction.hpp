@@ -8,6 +8,7 @@ namespace ratexpr {
         std::int64_t num, den;
         void Stablelool();
         std::int64_t gcd(std::int64_t a, std::int64_t b) const;
+        
         public:
         Fraction();
         Fraction( std::int64_t numerator, std::int64_t denominator = 1 );

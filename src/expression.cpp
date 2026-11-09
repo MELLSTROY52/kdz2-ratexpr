@@ -1,8 +1,8 @@
 
 #include <memory>
 #include <ostream>
-#include "fraction.hpp"
-#include "expression.hpp"
+#include "ratexpr/fraction.hpp"
+#include "ratexpr/expression.hpp"
 
 
 namespace ratexpr {
@@ -18,6 +18,8 @@ namespace ratexpr {
     void Const::print( std::ostream& os) const {
         os << dro;
     }
+    Negative::Negative(std::unique_ptr<Expression> operand) 
+    : operand(std::move(operand)) {}
     Fraction Negative::evaluate() const{
         return -(operand->evaluate());
     }

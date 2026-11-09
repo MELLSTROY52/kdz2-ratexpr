@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <iostream>
 #include <stdexcept>
-#include <fraction.hpp>
+#include <ratexpr/fraction.hpp>
 #include <cstdlib>
 
 namespace ratexpr {
@@ -30,7 +30,7 @@ namespace ratexpr {
     }
     Fraction::Fraction() : num(0), den(1) {}
 
-    Fraction::Fraction(std::int64_t numerator, std::int64_t denominator) : num(numerator), den(denominator) {
+    Fraction::Fraction(std::int64_t numerator, std::int64_t denominator) : num(numerator), den(denominator)  {
         if (den == 0) {
             throw std::invalid_argument("Нелья делить на 0");
         }
