@@ -153,6 +153,9 @@ namespace ratexpr {
     }
 
     std::ostream& operator<<(std::ostream& os, const Fraction& f) {
+        if ( f.den == 1) {
+            return os << f.num << '/' << f.den;
+        }
         return os << f.num << '/' << f.den;
     }
 }
